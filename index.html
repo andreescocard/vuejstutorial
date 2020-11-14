@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lista de livros</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app" class="container">
+        <h2>{{cabecalho}}</h2>
+        <!-- Componentes reusaveis -->
+        <add-item-comp></add-item-comp>
+        <counter></counter>
+        <itens-comp></itens-comp>
+        
+        <div class="footer">
+            <hr/>
+            <em>Mude o título da lista aqui:</em>
+            <altera-titulo-comp></altera-titulo-comp>
+        </div>
+        
+        <!--
+            <input v-model="novoLivro" @keyup.enter="addLivro"
+            placeholder="Adicionar novo livro" type="text"
+            class="form-control">
+            <input v-model="novoAutor" @keyup.enter="addLivro"
+            placeholder="Adicionar novo autor" type="text"
+            class="form-control"> <br>
+            
+            <span class="input-group-btn">
+                <button @click="addLivro" class="js-add btn btn-primary btn-block"
+                type="button">Adicionar!</button>
+            </span>
+            <ul>
+                <li v-for="livro in livros" v-bind:class="{ 'removido': livro.checked }">
+                    <div class="checkbox">
+                        <label>
+                            <input class="js-livro" name="list" type="checkbox" v-model="livro.checked">
+                            <big>{{livro.titulo}}</big> - <small>{{livro.autor}}</small>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+            <div class="footer">
+                <hr/>
+                <em>Modifique o título da lista:</em>
+                <input v-model="cabecalho"/>
+            </div>
+        -->
+    </div>
+</div>
+<!-- USING JQUERY
+    <div class="container">
+        <h2>Minha lista de livros</h2>
+        <input placeholder="Adicione um livro" type="text" class="js-novo-livro form-control"> <br>
+        <input placeholder="Nome do autor" type="text" class="js-novo-autor form-control"> <br>
+        <button @click="addItem" class="js-add btn btn-primary btn-block" type="button">Adicionar!</button>
+        <ul>
+            <li>
+                <div class="checkbox">
+                    <label>
+                        <input class="js-livro" name="list" type="checkbox" />
+                        <big>Alice no País das Maravilhas</big> - <small>Lewis Carrol</small>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox">
+                    <label>
+                        <input class="js-livro" name="list" type="checkbox">
+                        <big>A Menina que Roubava Livros</big> - <small>Markus Zusak</small>
+                    </label>
+                </div>
+            </li>
+            <li class="removido">
+                <div class="checkbox">
+                    <label>
+                        <input class="js-livro"  name="list"  type="checkbox" checked>
+                        <big>O Senhor dos Anéis - As Duas Torres</big> - <small>J. R. R. Tolkien</small>
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </div>
+-->
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>
